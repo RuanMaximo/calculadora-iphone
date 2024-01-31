@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Calculadora | Iphone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="borda">
+        <div class="celular2">
+            <div class="divisao2">
+                <div class="barra_central2">
+                    <div class="vazio"></div>
+                    <div class="altofalante2"></div>
+                    <div class="camera"></div>
+                </div>
+            </div>
+                <div class="div_historico">
+                    <p class="p_historico" id="historico">Histórico</p>
+                </div>
+                <div class="div_barra">
+                    <a href="" style="text-decoration: none;">
+                        <p style="color: rgb(255, 164, 37); text-align: end;">Limpar</p>
+                    </a>
+                </div>
+                <div class="divisao_barra">
+                    <div class="barra2"></div>
+                </div>
+        </div>
+    </div>
+
+    <div class="borda">
+    <div class="celular">
+        <div class="divisao2">
+            <div class="relogio" id="clock"></div>
+
+            <div class="barra_central">
+                <div class="vazio"></div>
+                <div class="vazio"></div>
+                <div class="altofalante"></div>
+                <div class="camera"></div>
+            </div>
+            <div class="quatroG">
+                <div class="vazio"></div>
+                <div class="barras">
+                    <div class="barrinha1"></div>
+                    <div class="barrinha2"></div>
+                    <div class="barrinha3"></div>
+                    <div class="barrinha4"></div>
+                </div>
+                <div class="G">4G</div>
+            </div>
+            <div class="bateria_flex">
+                <div class="bateria_branco" id="bateria"></div>
+            </div>
+        </div>
+        <div class="calculadora">
+            <input type="text" class="tela" id="display" maxlength="10" pattern="[0-9+\-*/.]*">
+
+            <div class="divisao">
+                <div class="comandos" onclick="removerDisplay()">AC</div>
+                <div class="comandos" onclick="negativoDisplay('-')">+/−</div>
+                <div class="comandos" onclick="porcentagemDisplay('/100')">%</div>
+                <div class="sinais" id="sinais" onclick="appendToDisplay('/')">÷</div>
+            </div>
+            
+            <div class="divisao">
+                <div class="numeros" onclick="appendToDisplay('7')">7</div>
+                <div class="numeros" onclick="appendToDisplay('8')">8</div>
+                <div class="numeros" onclick="appendToDisplay('9')">9</div>
+                <div class="sinais" id="sinais" onclick="appendToDisplay('*')">×</div>
+            </div>
+    
+            <div class="divisao">
+                <div class="numeros" onclick="appendToDisplay('4')">4</div>
+                <div class="numeros" onclick="appendToDisplay('5')">5</div>
+                <div class="numeros" onclick="appendToDisplay('6')">6</div>
+                <div class="sinais" id="sinais" onclick="appendToDisplay('-')">−</div>
+            </div>
+            <div class="divisao">
+                <div class="numeros" onclick="appendToDisplay('1')">1</div>
+                <div class="numeros" onclick="appendToDisplay('2')">2</div>
+                <div class="numeros" onclick="appendToDisplay('3')">3</div>
+                <div class="sinais" id="sinais" onclick="appendToDisplay('+')">+</div>
+            </div>
+    
+            <div class="divisao">
+                <div class="zero" onclick="appendToDisplay('0')">0</div>
+                <div class="numeros" onclick="appendToDisplay('.')">,</div>
+                <div class="sinais" onclick="calculateResult()">=</div>
+            </div>
+            <div class="divisao2">
+                <div class="barra"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+    
+</body>
+</html>
